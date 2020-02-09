@@ -1,0 +1,19 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Benjamin Morehouse
+	email = bmorehou@usc.edu
+[alias]
+	ga=git add --all
+	gs=git status --short
+	gc=git commit --all
+	gp=git push
+	cr=~/code/htmlProject/chromerefresh.sh
+	std=cd ~/repositories/std && ./std open && clear
+	stdc=cd ~/repositories/std && ./std create && clear
+	stdd=cd ~/repositories/std && ./std delete && clear
+	stdw=cd ~/repositories/std && ./std welcome && clear
+

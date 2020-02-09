@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/Users/benmorehouse/repositories/benmorehouse.github.io'
+let g:netrw_dirhist_6='/Users/benmorehouse/repositories'
+let g:netrw_dirhist_5='/Users/benmorehouse/repositories/exploringVue'
+let g:netrw_dirhist_4='/Users/benmorehouse/repositories'
+let g:netrw_dirhist_3='/Users/benmorehouse/repositories/ginkgo'
+let g:netrw_dirhist_2='/Users/benmorehouse/repositories'
+let g:netrw_dirhist_1='/Users/benmorehouse'

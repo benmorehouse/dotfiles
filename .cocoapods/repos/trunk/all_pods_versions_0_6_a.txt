@@ -1,0 +1,12 @@
+DataEyeAppAnalysis/2.5.2
+EventsCalendar/0.1.0/0.1.1
+FSCalendar-moolban/2.7.9.1/2.7.9.2/2.8.0.1
+GoogleDataTransport/1.0.0/1.1.0/1.1.1/1.1.2/1.1.3/1.2.0/2.0.0/3.0.0/3.0.1/3.1.0/3.2.0
+HZAdSense/1.0.0/1.0.1/1.0.10/1.0.11/1.0.12/1.0.2/1.0.3/1.0.4/1.0.5/1.0.6/1.0.7/1.0.8/1.0.9
+IanEasyTableView/0.0.1
+Konfig/1.0.2
+LHSTableViewCells/0.0.1
+LPHPopTable/0.0.1/0.0.2/0.0.3
+MagicChart/0.1.0/0.2.0
+StravaResultKit/0.0.2
+ZCRLocalizedObject/0.1.0/0.2.0
