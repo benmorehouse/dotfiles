@@ -73,6 +73,24 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 alias std='cd ~/repositories/std; ./std open; clear; cd;'
 alias rtc='cd ~/repositories/rtc; clear; ./rtc; cd; '
+alias v="/usr/local/bin/vim"
+alias vi="vim"
+alias g="git"
+alias w='cd ~/programs/work'
+alias .='cd ../'
+alias ga='git add --all'
+alias gs='git status --short'
+alias gc='git commit --all'
+alias gp='git push'
+alias cr='~/code/htmlProject/chromerefresh.sh'
+alias rtc='cd ~/repositories/rtc; clear; ./rtc; cd; '
+alias std='cd ~/repositories/std; ./std open; clear; cd;'
+alias stdc='cd ~/repositories/std; ./std create; clear; cd;'
+alias stdd='cd ~/repositories/std; ./std delete; clear; cd;'
+alias stdw='cd ~/repositories/std; ./std welcome; clear; cd;'
+alias stdb='cd ~/repositories/std; ./std backlog; clear; cd;'
+alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
