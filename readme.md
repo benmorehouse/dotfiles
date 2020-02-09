@@ -3,9 +3,10 @@
 ![The look of my zsh!](.dotimages/vimsetup2.png)
 ![The look of my vim!](.dotimages/vimsetup1.png)
 
-This is just an approach that I have working pretty well for myself right now for my zsh setup and vim setup
+This is just an approach that I have working pretty well for myself right now for my zsh setup and vim setup.
 
-It is of a humble beginning for right now. But I have my vim setup around writing good go, as well as having good file management.
+It is of a humble beginning for right now. But I have my vim setup around go, good file management with nerdtree, as well as some of my own tools
+implemented nicely.
 
 ## Colorscheme
 
