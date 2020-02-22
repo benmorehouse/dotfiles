@@ -20,8 +20,10 @@ Plug 'leafgarland/typescript-vim'
 Plug 'posva/vim-vue'
 Plug 'preservim/nerdtree'
 Plug 'yuttie/comfortable-motion.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
+let g:go_null_module_warning = 0
 let g:go_version_warning = 0
 let g:comfortable_motion_friction = 1000.0
 let g:comfortable_motion_air_drag = 0.0

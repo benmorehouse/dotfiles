@@ -91,6 +91,7 @@ alias stdw='cd ~/repositories/std; ./std welcome; clear; cd;'
 alias stdb='cd ~/repositories/std; ./std backlog; clear; cd;'
 alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+alias config='/usr/bin/git --git-dir=/Users/benmorehouse/.cfg/ --work-tree=/Users/benmorehouse'
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
