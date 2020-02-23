@@ -21,6 +21,7 @@ Plug 'posva/vim-vue'
 Plug 'preservim/nerdtree'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'bfrg/vim-cpp-modern'
 call plug#end()
 
 let g:go_null_module_warning = 0
