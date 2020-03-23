@@ -22,6 +22,7 @@ Plug 'preservim/nerdtree'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'bfrg/vim-cpp-modern'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 let g:go_null_module_warning = 0
@@ -30,6 +31,7 @@ let g:comfortable_motion_friction = 1000.0
 let g:comfortable_motion_air_drag = 0.0
 let g:comfortable_motion_scroll_down_key = "j"
 let g:comfortable_motion_scroll_up_key = "k"
+let NERDTreeShowHidden=1
 
 colorscheme gruvbox
 
