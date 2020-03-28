@@ -22,7 +22,6 @@ Plug 'preservim/nerdtree'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'bfrg/vim-cpp-modern'
-Plug 'sheerun/vim-polyglot'
 Plug 'valloric/youcompleteme'
 Plug 'sheerun/vim-polyglot'
 call plug#end()
