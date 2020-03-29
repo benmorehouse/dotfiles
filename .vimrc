@@ -1,6 +1,7 @@
 syntax on
 set bg=dark
 set modifiable
+set t_Co=256
 
 inoremap jk <Esc>
 inoremap kj <Esc>
@@ -13,6 +14,7 @@ nnoremap <silent> <C-k> :call comfortable_motion#flick(-100)<CR>
 
 set number
 set noswapfile
+set completeopt-=preview
 
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
@@ -32,8 +34,8 @@ let g:comfortable_motion_friction = 1000.0
 let g:comfortable_motion_air_drag = 0.0
 let g:comfortable_motion_scroll_down_key = "j"
 let g:comfortable_motion_scroll_up_key = "k"
+let g:ycm_enable_diagnostic_signs = 0
 let NERDTreeShowHidden=1
-
 colorscheme gruvbox
 
 map <Leader>v :execute("vsplit")<CR>
