@@ -73,8 +73,11 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 alias std='cd ~/repositories/std; ./std open; clear; cd;'
 alias rtc='cd ~/repositories/rtc; clear; ./rtc; cd; '
-alias v="/usr/local/bin/vim"
-alias vi="vim"
+
+alias v="/usr/local/bin/nvim"
+alias vim='nvim'
+alias vi='nvim'
+
 alias g="git"
 alias w='cd ~/programs/work'
 alias .='cd ../'
