@@ -3,7 +3,9 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/benmorehouse/.oh-my-zsh"
-
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH="$HOME/go"
+PATH="$GOPATH/bin:$PATH"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -95,6 +97,8 @@ alias stdb='cd ~/repositories/std; ./std backlog; clear; cd;'
 alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 alias config='/usr/bin/git --git-dir=/Users/benmorehouse/.cfg/ --work-tree=/Users/benmorehouse'
+
+alias go='/usr/local/bin/go'
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
