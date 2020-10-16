@@ -10,6 +10,7 @@ nnoremap <silent> <C-k> :call comfortable_motion#flick(-100)<CR>
 set number
 set noswapfile
 set completeopt-=preview
+set nowrap
 
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
