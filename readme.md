@@ -1,4 +1,4 @@
-# My humble approach to dotfiles
+# My humble approach to a solid environment
 
 ![The look of my zsh!](.dotimages/vimsetup2.png)
 ![The look of my vim!](.dotimages/vimsetup1.png)
