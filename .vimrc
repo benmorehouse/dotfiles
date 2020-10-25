@@ -11,6 +11,7 @@ set number
 set noswapfile
 set completeopt-=preview
 set nowrap
+set clipboard=unnamed
 
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
