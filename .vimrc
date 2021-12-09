@@ -37,7 +37,9 @@ call plug#end()
 
 let g:ale_linters_explicit = 1
 let g:ale_linters = {'go': ['golangci-lint']}
-let g:ale_go_golangci_lint_options = '--fast'
+let g:ale_go_golangci_lint_options = '--disable-all --enable deadcode,errcheck,gosimple,govet,ineffassign,staticcheck,structcheck,unused,varcheck,whitespace,unparam,unconvert,goconst,misspell,revives'
+let g:ale_go_golangci_lint_package = 1
+
 let g:go_null_module_warning = 0
 let g:go_version_warning = 0
 let g:comfortable_motion_friction = 1000.0
