@@ -1,14 +1,11 @@
-# If you come from bash you might have to change your $PATH.
+# Welcome to my zshrc fuckers
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation
 ZSH_DISABLE_COMPFIX=true
-export ZSH="/Users/benmorehouse/.oh-my-zsh"
-export PATH="/opt/homebrew/bin:$PATH"
+export ZSH="/Users/benjamin/.oh-my-zsh"
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:/Library/PostgreSQL/15/bin
-export PATH="$PATH:/Users/benmorehouse/.yarn/bin"
 
 # use latest version of grep
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
@@ -17,136 +14,91 @@ export PATH="${PATH}:${HOME}/.krew/bin"
 # this is for arduino idea path
 export PATH=/usr/local/bin:/usr/local/avr/bin:$PATH
 export PATH="$PATH":"$HOME/.pub-cache/bin"
+export PATH=$PATH:/opt/homebrew/bin
 export GOPATH="$HOME/go"
 export GOSUMDB="sum.golang.org"
 export GOPROXY="https://proxy.golang.org,direct"
 export GO111MODULE=""
-export GONOPROXY="github.com/benmorehouse/*"
-export GONOSUMDB="github.com/benmorehouse/*"
-export GOPRIVATE="github.com/benmorehouse/*"
 export CGO_ENABLED=0
-export XDG_CONFIG_HOME=/Users/benmorehouse/
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-export DYLD_LIBRARY_PATH="/opt/homebrew/opt/llvm/lib:$DYLD_LIBRARY_PATH"
-export VIRTUAL_ENV=/Users/benmorehouse/default_env
-export EDITOR=/usr/local/bin/vim
-export VISUAL=/usr/local/bin/vim
-export CONDA_DEFAULT_ENV=/Users/benmorehouse/default_env
+export EDITOR=/usr/local/Cellar/vim/9.1.0600/bin/vim
+export HISTSIZE=2000
+export HISTFILE="$HOME/.history"
+export SAVEHIST=$HISTSIZE
+export XDG_CONFIG_HOME=/Users/benjamin/
+export CR_PAT=""
+export NVM_DIR="$HOME/.nvm"
+export KUBECONFIG=~/.kube/config
+export PORT=""
+export LDFLAGS="-L/usr/local/opt/node@18/lib"
+export CPPFLAGS="-I/usr/local/opt/node@18/include"
 
-export DB_MIGRATE_URL="postgresql+psycopg2://user:password@localhost/dbname"
+# Android 
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+# export JAVA_HOME="/usr/bin/java"
+# export PATH=$JAVA_HOME:$PATH
+# export PATH="$HOME/.jenv/bin:$PATH"
+# export JAVA_HOME="/usr/bin/java"
+export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+export PATH="/usr/local/opt/node@18/bin:$PATH"
+
 
 PATH="$GOPATH/bin$PATH"
-
-# Exposing GH_USERNAME per https://tanzu.vmware.com/developer/guides/ci-cd/concourse-gs/
 export GH_USERNAME=benmorehouse
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
-export AWS_ACCESS_KEY_ID=""
-export AWS_SECRET_ACCESS_KEY=""
-export DEV_AWS_ACCESS_KEY=""
-export DEV_AWS_SECRET_ACCESS_KEY=""
 export AWS_REGION="us-west-2"
 export HCP_CLIENT_ID=""
 export HCP_CLIENT_SECRET=""
 export VAULT_ADDR=""
 export VAULT_NAMESPACE="admin"
-export PORT=8080
 export LOCAL_DEPLOY=1
 export REGION="us-west-2"
+export VERCEL_TOKEN=""
 
-export GIT_USER=
-export GIT_TOKEN=
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
+export GIT_USER=benmorehouse
+
+export GITHUB_TOKEN=
+
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(git aws kubectl)
 # plugins=(git helm aws docker docker-compose flutter golang kubectl pip python zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
-source <(kubectl completion zsh)
-
-source /Users/benmorehouse/default_env/bin/activate
-
 alias k=kubectl
-
-alias python=/opt/homebrew/bin/python3.12
+alias awsdev='ln -sf ~/.kube/aws-dev.yaml ~/.kube/config'
+alias dodev='ln -sf ~/.kube/do-config.yaml ~/.kube/config'
 alias kk=k9s
-alias argocd='argocd --server='
+alias argocd='argocd --server=localhost:8080'
+
+# target python installed version of vim from homebrew
+alias vim='/usr/local/Cellar/vim/9.1.0600/bin/vim'
+alias vi='/usr/local/Cellar/vim/9.1.0600/bin/vim'
+alias vin='/usr/local/Cellar/vim/9.1.0600/bin/vim'
+alias python3='/usr/local/bin/python3'
+alias python='/usr/local/bin/python3'
 alias dc='docker-compose'
 alias gda='git diff -a'
+alias edit_snippets='vim ~/.vim/plugged/vim-snippets/snippets/go.snippets'
+alias kk='k9s'
+alias yew='cd ~/repositories/yew/'
+alias travel="cd ~/repositories/benmorehouse/traveler"
+alias allara="cd ~/repositories/benmorehouse/allara"
 
 alias install_kustomize="cd ~/repositories/perch/kustomize/kustomize && go install ."
 alias .='cd ../'
 alias rtc='cd ~/repositories/rtc; clear; ./rtc; cd; '
 alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
-alias config='/usr/bin/git --git-dir=/Users/benmorehouse/.cfg/ --work-tree=/Users/benmorehouse'
-alias dynamo='cd ~/.aws/dynamodb_local_latest; java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb'
-alias dcl='aws dynamodb --endpoint-url http://localhost:8000 --output=json --region=eu-west-2'
-alias prc="cd ~/repositories/radix"
-alias api="cd ~/repositories/radix/arbitrate-api"
-alias web="cd ~/repositories/radix/admin-portal"
-alias ui="cd ~/repositories/radix/radix-ui"
-alias inf="cd ~/repositories/radix/terraform-live"
+alias config='/usr/bin/git --git-dir=/Users/benjamin/.cfg/ --work-tree=/Users/benjamin'
+alias prc="cd ~/repositories/bumpin"
+alias api="cd ~/repositories/bumpin/bumpin-api/src"
+alias web="cd ~/repositories/bumpin/bumpkin-web"
+alias ben="cd ~/repositories/benmorehouse"
 alias k="kubectl"
 alias gc!="git commit --amend --signoff"
 alias gc="git commit --signoff"
@@ -157,7 +109,35 @@ alias usc='cd ~/repositories/school-notes'
 alias gt='go test'
 alias tp='terraform plan'
 alias tf='terraform'
+alias fd='cd ~/repositories/benmorehouse-finale-desserts/'
 
 grp() {
 	grep -r "$1" *
 }
+
+export NVM_DIR="$HOME/.nvm"
+
+init_nvm() {
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+}
+
+listening() {
+    if [ $# -eq 0 ]; then
+        sudo lsof -iTCP -sTCP:LISTEN -n -P
+    elif [ $# -eq 1 ]; then
+        sudo lsof -iTCP -sTCP:LISTEN -n -P | grep -i --color :$1
+    else
+        echo "Usage: listening [pattern]"
+    fi
+}
+
+alias find_port=listening
+alias kill_pid=kill -9
+
+# bun completions
+# [ -s "/Users/benjamin/.bun/_bun" ] && source "/Users/benjamin/.bun/_bun"
+
+# bun
+# export BUN_INSTALL="$HOME/.bun"
+# export PATH="$BUN_INSTALL/bin:$PATH"
