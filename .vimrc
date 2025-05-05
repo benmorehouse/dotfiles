@@ -1,5 +1,7 @@
-" Welcome to my vimrc. You'll need to download https://github.com/morhetz/gruvbox to be able to run this
-" properly. You will also n eed 
+" use this to fix tab and space problem
+" :set et!
+" :ret!
+
 syntax on
 set bg=dark
 set modifiable
@@ -21,9 +23,7 @@ set clipboard=unnamed
 set nowrap
 set fileformat=unix
 
-" Managed using https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
-Plug 'valloric/youcompleteme'
 Plug 'morhetz/gruvbox'
 Plug 'leafgarland/typescript-vim'
 Plug 'posva/vim-vue'
@@ -34,9 +34,10 @@ Plug 'bfrg/vim-cpp-modern'
 Plug 'sheerun/vim-polyglot'
 Plug 'honza/vim-snippets' 
 Plug 'w0rp/ale'
+Plug 'valloric/youcompleteme' 
 Plug 'dart-lang/dart-vim-plugin'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
-
 
 let g:ale_linters_explicit = 1
 let g:ale_linters = {
@@ -47,7 +48,6 @@ let g:ale_linters = {
       \ 'json': ['eslint'],
       \ 'go': ['golangci-lint'],
       \ 'terraform': ['terraform-lsp'],
-      \ 'python': ['flake8', 'pydocstyle', 'mypy'],
       \ }
 
 " Hide the signs column when there are no linting errors or warnings
@@ -63,7 +63,6 @@ let g:ale_fixers = {
       \ 'typescript.tsx': ['eslint'],
       \ 'html': ['eslint'],
       \ 'json': ['eslint'],
-      \ 'python': ['black'],
       \ }
 
 let g:ale_fix_on_save = 1
@@ -73,30 +72,9 @@ let g:ale_echo_msg_format = '[%linter%] %code: %%s'
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 1
 
-let g:ale_python_flake8_executable = 'flake8'
-" let g:ale_python_flake8_options = '--config=/path/to/.flake8'
-let g:ale_python_mypy_executable = 'poetry'
-let g:ale_python_mypy_options = 'run mypy'
-let g:ale_python_pydocstyle_executable = 'poetry'
-let g:ale_python_pydocstyle_options = 'run pydocstyle'
-
-" Display error and warning symbols in the gutter
-let g:ale_sign_error = '✘'
-let g:ale_sign_warning = '▲'
-
-" Enable linting when leaving insert mode or opening a file
-let g:ale_lint_on_insert_leave = 1
-let g:ale_lint_on_enter = 1
-let g:ale_lint_on_save = 1
-
-let g:ale_python_flake8_executable = '/Users/benmorehouse/default_env/bin/flake8'
-let g:ale_python_black_executable = '/Users/benmorehouse/default_env/bin/black'
-
 " ale lint settings for go
 let g:ale_go_golangci_lint_options = '-c /Users/benmorehouse/.golangci-lint.yml'
 let g:ale_go_golangci_lint_package = 1
-
-
 let g:go_null_module_warning = 0
 let g:go_version_warning = 0
 
@@ -104,6 +82,7 @@ let g:comfortable_motion_friction = 1000.0
 let g:comfortable_motion_air_drag = 0.0
 let g:comfortable_motion_scroll_down_key = "j"
 let g:comfortable_motion_scroll_up_key = "k"
+let g:ycm_enable_diagnostic_signs = 0
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 
@@ -116,9 +95,6 @@ let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsListSnippets="<c-l>"
 " ultisnips mapping
-
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_server_python_interpreter = '/Users/benmorehouse/default_env/bin/python3.12'
 
 " terraform configurations
 " let g:terraform_align=1
@@ -162,4 +138,31 @@ map s :wall<cr>
 map mm :NERDTree<cr>
 map ,v :vs<cr>
 map ,s :sp<cr>
-map gl :GoLint<cr>
+map gl :GoLint<cr>#
+
+
+" Use [g and ]g to jump to errors
+nmap [g <Plug>(coc-diagnostic-prev)
+nmap ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation
+nmap gd <Plug>(coc-definition)
+nmap gy <Plug>(coc-type-definition)
+nmap gi <Plug>(coc-implementation)
+nmap gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window
+nnoremap <silent> K :call CocActionAsync('doHover')<CR>
+
+" COC: Use Tab to trigger completion and navigate
+inoremap <silent><expr> <TAB>
+  \ pumvisible() ? "\<C-n>" :
+  \ CheckBackspace() ? "\<TAB>" :
+  \ coc#refresh()
+
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
